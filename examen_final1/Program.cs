@@ -25,8 +25,8 @@ namespace examen_final1
             {
                 return 0;
             }
-
-            return sum + Rec(array[]);
+            int i = array.Length;
+            return sum + Rec(array[i - 1]);
         }
     }
 }
