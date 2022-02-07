@@ -15,18 +15,21 @@ namespace examen_final1
                 array[i] = Convert.ToInt32(Console.ReadLine());
             }
 
-            Rec(array);
+            Rec(array, dim);
         }
 
-        public static int Rec(int[] array)
+        public static int Rec(int[] array, int dim)
         {
             int sum = 0;
-            if(array.Length <= 0)
+            if(dim <= 0)
             {
                 return 0;
             }
-            int i = array.Length;
-            return sum + Rec(array[i - 1]);
+            //sum = sum + array[dim];
+            sum = sum + array[dim -1];
+            int result = sum + Rec(array, dim -1);
+            Console.WriteLine(result);
+            return result;
         }
     }
 }
